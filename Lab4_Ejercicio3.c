@@ -112,7 +112,7 @@ void simulate_processes() {
         }
         
         int request[NUM_RESOURCES];
-        printf("Enter resource request for process %d: ", process);
+        printf("Ingresa el pedido de recursos para el proceso %d: ", process);
         for (int i = 0; i < NUM_RESOURCES; ++i) {
             scanf("%d", &request[i]);
         }
