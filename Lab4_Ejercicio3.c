@@ -81,13 +81,13 @@ void release_resources(int process, int release[]) {
 }
 
 void simulate_processes() {
-    printf("Enter available resources: ");
+    printf("Ingresa los recursos disponibles: ");
     for (int i = 0; i < NUM_RESOURCES; ++i) {
         scanf("%d", &available[i]);
     }
 
 
-    printf("Enter maximum resources for each process:\n");
+    printf("Ingresa el maximo de recursos para un proceso:\n");
     for (int i = 0; i < NUM_PROCESSES; ++i) {
         printf("Process %d: ", i);
         for (int j = 0; j < NUM_RESOURCES; ++j) {
@@ -105,7 +105,7 @@ void simulate_processes() {
 
     while (true) {
         int process;
-        printf("Enter process (0-%d) or -1 to exit: ", NUM_PROCESSES - 1);
+        printf("Ingrasa el proceso (0-%d) o -1 para salir: ", NUM_PROCESSES - 1);
         scanf("%d", &process);
         if (process == -1) {
             break;
@@ -118,12 +118,12 @@ void simulate_processes() {
         }
 
         if (request_resources(process, request)) {
-            printf("Resources allocated successfully.\n");
+            printf("Recursos puestos correctamente.\n");
         } else {
-            printf("Unable to allocate resources.\n");
+            printf("No se ha podido colocar el recurso\n");
         }
 
-        printf("Available resources: ");
+        printf("Recursos disponibles: ");
         for (int i = 0; i < NUM_RESOURCES; ++i) {
             printf("%d ", available[i]);
         }
